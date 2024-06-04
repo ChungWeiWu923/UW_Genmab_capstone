@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for KOLs</title>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Finding your KOLs</h1>
+        <div class="areas">
+            <button id="oncology-btn">Oncology</button>
+            <button id="immunology-btn">Immunology</button>
+        </div>
+    </div>
+
+    <div class="place-holder"></div>
+    <div class="container">
+        <form method="get">
+            <div class="sidebar">
+                <fieldset id="immunology-fieldset" class="filter-area" style="display: none;">
+                    <legend>Subarea of Immunology</legend>
+                    <label><input type="radio" name="immunology-area" value="All"> All</label>
+                    <label><input type="radio" name="immunology-area" value="Chronic Urticaria"> Chronic Urticaria</label>
+                    <label><input type="radio" name="immunology-area" value="Lupus Erythematosus"> Lupus Erythematosus</label>
+                    <label><input type="radio" name="immunology-area" value="Rheumatoid Arthritis"> Rheumatoid Arthritis</label>
+                </fieldset>
+                
+                <fieldset id="oncology-fieldset" class="filter-area" style="display: none;">
+                    <legend>Subarea of Oncology</legend>
+                    <label><input type="radio" name="oncology-area" value="All"> All</label>
+                    <label><input type="radio" name="oncology-area" value="DLBCL"> DLBCL</label>
+                    <label><input type="radio" name="oncology-area" value="Pancreatic Adenocarcinoma"> Pancreatic Adenocarcinoma</label>
+                    <label><input type="radio" name="oncology-area" value="Uterine Cervical Cancer"> Uterine Cervical Cancer</label>
+                </fieldset>
+                
+                <label for="yoe">Years of working experience:</label>
+                <select name="yoe" id="years of working experience">
+                    <option value="">Select experience range</option>
+                    <option value="1 Year">1 Year</option>
+                    <option value="5 Years">5 Years</option>
+                    <option value="10 Years">10 Years</option>
+                    <option value="More than 10 Years">More than 10 Years</option>
+                </select>
+
+                <label for="numbers-of-publication">Number of Publications:</label>
+                <select name="pub_count" id="numbers-of-publication">
+                    <option value="">Select publication range</option>
+                    <option value="Less Than 2">Less Than 2</option>
+                    <option value="2 ~ 5">2 ~ 5</option>
+                    <option value="5 ~ 10">5 ~ 10</option>
+                    <option value="More than 10">More than 10</option>
+                </select>
+
+                <label for="numbers-of-coauthorship">Number of Clinic Trials:</label>
+                <select name="coauthorship_count" id="numbers-of-coauthorship">
+                    <option value="">Select Co-authorship range</option>
+                    <option value="Less Than 20">Less Than 20</option>
+                    <option value="20 ~ 40">20 ~ 40</option>
+                    <option value="40 ~ 60">40 ~ 60</option>
+                    <option value="More than 60">More than 60</option>
+                </select>
+
+                <button class="search" type="submit">Search for KOLs</button>
+            </div>
+        </form>
+
+        <!-- <div class="place-holder">
+            <h2>Welcome to our KOL Search Tool</h2>
+            <p>This tool allows you to find key opinion leaders (KOLs) in Oncology and Immunology. You can filter the search based on their years of experience, number of publications, and clinical trials involvement.</p>
+            <img src="path_to_default_image.jpg" alt="Introduction Image" id="placeholder-image">
+        </div>         -->
+
+        <div class="place-holder">
+            <h2>Welcome to Our KOL Finder Tool</h2>
+            <p>Discover influential leaders in the fields of Oncology and Immunology using our advanced AI-driven search tool. Our system employs state-of-the-art Graph Neural Networks (GNNs) to analyze complex datasets and identify individuals who are leading voices in their respective fields.</p>
+            
+            <h3>How It Works:</h3>
+            <ul>
+                <li><strong>Data-Driven Insights:</strong> Utilize comprehensive data extracted from numerous publications and clinical trial participations to ensure the accuracy and relevance of your search results.</li>
+                <li><strong>Customizable Search:</strong> Filter KOLs based on specific criteria such as years of experience, number of publications, and clinical trial contributions. Each filter fine-tunes the search to match your exact needs.</li>
+                <li><strong>Graph Neural Network Analysis:</strong> Our backend leverages sophisticated models to evaluate the centrality and impact of potential KOLs within their networks, ensuring that you find not just any experts, but the right ones for your purposes.</li>
+            </ul>
+
+            <h3>Understanding Graph Neural Networks (GNNs):</h3>
+                <p>Graph Neural Networks are a type of neural network designed specifically for data represented as graphs. This makes them ideal for scenarios where data points are interconnected, such as social networks, molecular structures, or even research networks in medical fields.</p>
+                
+                <ul>
+                    <li><strong>Data Representation:</strong> In GNNs, data is represented as nodes (vertices) and relationships (edges), with each node containing attributes that describe its characteristics.</li>
+                    <li><strong>Feature Learning:</strong> GNNs are capable of learning complex patterns in the data by aggregating information from a node’s neighbors, effectively capturing both local and global structures within the graph.</li>
+                    <li><strong>Application in KOL Identification:</strong> By applying GNNs, our tool can determine the centrality and influence of potential KOLs within their networks, identifying those who have significant impacts on their fields based on publication and clinical trials data.</li>
+                </ul>
+            
+            <h3>Accuracy Rates:</h3>
+            <p><strong>Oncology:</strong></p>
+            <ul>
+                <li>DLBCL: 25%</li>
+                <li>Pancreatic Adenocarcinoma: 25%</li>
+                <li>Uterine Cervical Cancer: 10%</li>
+            </ul>
+            <p><strong>Immunology:</strong></p>
+            <ul>
+                <li>Chronic Urticaria: 73.3% (11/15)</li>
+                <li>Rheumatoid Arthritis: 25% (5/20)</li>
+                <li>Lupus Erythematosus: 40% (8/20)</li>
+            </ul>
+            <h3>Getting Started:</h3>
+            <ol>
+                <li>Choose your area of interest (Oncology or Immunology) to begin tailoring your search.</li>
+                <li>Utilize the filters to define the parameters of your search.</li>
+                <li>Hit 'Search for KOLs' to see a list of potential key opinion leaders who match your criteria.</li>
+            </ol>
+            <p><strong>Explore Now:</strong> Start your search and discover the leaders who are shaping the future of Oncology and Immunology.</p>
+        </div>
+        
+        <div class="main-content">
+            {% for item in results %}
+                <div class="provider-card">
+                    <div class="provider-info">
+                        <h2><a href="http://127.0.0.1:8000/info/?name={{item.name}}" target="_blank">{{ item.name }}</a></h2>
+                        <p>Affiliation : {{ item.affiliation }}</p>
+                        <p>KOL Score : {{ item.score }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="../../static/js/scripts.js"></script>
+</body>
+</html>
